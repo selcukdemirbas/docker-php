@@ -3,12 +3,13 @@
 A VERY simple PHP / Apache container build along with the Kubernetes configuration file to run with Minikube. Tested in M1. 
 
 ## Requires;
-
-1. Docker
+* Docker / docker-compose
+ -> https://docs.docker.com/get-docker/
 ```bash
 docker -v
 ```
-2. Minikube
+* Minikube
+-> https://minikube.sigs.k8s.io/docs/start/
 ```bash
 minikube version
 ```
