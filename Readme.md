@@ -1,6 +1,6 @@
 # Docker-Php
 
-A VERY simple PHP / Apache container build along with the Kubernetes configuration file to run with Minikube. Tested in ARM64. 
+A VERY simple PHP / Apache container build along with the Kubernetes configuration file to run with Minikube. Tested in M1. 
 
 ## Requires;
 
@@ -29,7 +29,7 @@ docker-compose build
 kubectl apply -f docker-php.yaml
 
 #Serve the app
-minikube service docker-php-service
+minikube service docker-php-svc
 ```
 
 ### Thanks!
