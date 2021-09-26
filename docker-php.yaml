@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: docker-php-app
+  labels:
+    app: docker-php
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: docker-php
+  template:
+    metadata:
+      labels:
+        app: docker-php
+    spec:
+      containers:
+      - name: docker-php-container
+        image: docker-php_app
+        ports:
+        - containerPort: 80
+        imagePullPolicy: Never
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: docker-php-svc
+  labels:
+    app: docker-php
+spec:
+  selector:
+    app: docker-php
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 80
